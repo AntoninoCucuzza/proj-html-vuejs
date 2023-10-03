@@ -4,16 +4,48 @@ import MainService from './main/MainService.vue'
 import AppGames from './main/AppGames.vue';
 import SpecialCategory from './main/SpecialCategory.vue'
 import MainDeals from './main/MainDeals.vue';
-
+import JumbotronSlider from './main/JumbotronSlider.vue'
+import MainBlogs from './main/MainBlogs.vue'
 
 export default {
     name: 'AppMain',
     data() {
         return {
-            popular: 'src//assets/img/cms-banner-01.jpg',
-            latest: 'src//assets/img/cms-banner-02.jpg',
-            discount: 'src//assets/img/cms-banner-03.jpg',
-            medDiscount: 'src//assets/img/cms-banner-04.jpg',
+            popular: 'src/assets/img/cms-banner-01.jpg',
+            latest: 'src/assets/img/cms-banner-02.jpg',
+            discount: 'src/assets/img/cms-banner-03.jpg',
+            medDiscount: 'src/assets/img/cms-banner-04.jpg',
+            brands: [
+                {
+                    name: 'White Wols',
+                    logo: 'src/assets/img/brand-01.png',
+                    link: '#',
+                },
+
+                {
+                    name: 'Fighters1',
+                    logo: 'src/assets/img/brand-02.png',
+                    link: '#',
+                },
+
+                {
+                    name: 'Tigers',
+                    logo: 'src/assets/img/brand-03.png',
+                    link: '#',
+                },
+
+                {
+                    name: 'Rhino',
+                    logo: 'src/assets/img/brand-04.png',
+                    link: '#',
+                },
+
+                {
+                    name: 'B2Jersey',
+                    logo: 'src/assets/img/brand-05.png',
+                    link: '#',
+                },
+            ]
 
         }
     },
@@ -23,6 +55,8 @@ export default {
         SpecialCategory,
         MainService,
         MainDeals,
+        JumbotronSlider,
+        MainBlogs,
     }
 }
 </script>
@@ -40,14 +74,25 @@ export default {
 
         <MainDeals :isTrue="false" :title="'our products'" />
 
-
-
         <AppGames :firstImg="discount" :firstType="'20% Discount'" :firstName="`Dragon's Dogma`" :firstInfo="'Video Game'"
             :secondImg="medDiscount" :secondType="'30% Discount'" :secondName="'World Of Tanks'" :secondInfo="'New Game'" />
 
         <MainDeals :isTrue="true" :title="'deal of the day'" />
     </div>
-    <h1>sadadas</h1>
+    <JumbotronSlider />
+
+    <div class="container">
+        <MainBlogs :title="'new game blogs'" />
+        <div class="row my-5">
+            <div class="col" v-for="brand in brands">
+                <a href="brand.link">
+                    <img :src="brand.logo" :alt="brand.name">
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <h1>asddas</h1>
 </template>
 
 
