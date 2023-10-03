@@ -3,9 +3,9 @@ import Jumbotron from './main/Jumbotron.vue';
 import MainService from './main/MainService.vue'
 import AppGames from './main/AppGames.vue';
 import SpecialCategory from './main/SpecialCategory.vue'
+import MainDeals from './main/MainDeals.vue';
 
 
-Jumbotron
 export default {
     name: 'AppMain',
     data() {
@@ -14,6 +14,7 @@ export default {
             latest: 'src//assets/img/cms-banner-02.jpg',
             discount: 'src//assets/img/cms-banner-03.jpg',
             medDiscount: 'src//assets/img/cms-banner-04.jpg',
+
         }
     },
     components: {
@@ -21,7 +22,7 @@ export default {
         AppGames,
         SpecialCategory,
         MainService,
-
+        MainDeals,
     }
 }
 </script>
@@ -37,10 +38,16 @@ export default {
 
         <SpecialCategory />
 
+        <MainDeals :isTrue="false" :title="'our products'" />
+
+
+
         <AppGames :firstImg="discount" :firstType="'20% Discount'" :firstName="`Dragon's Dogma`" :firstInfo="'Video Game'"
             :secondImg="medDiscount" :secondType="'30% Discount'" :secondName="'World Of Tanks'" :secondInfo="'New Game'" />
 
+        <MainDeals :isTrue="true" :title="'deal of the day'" />
     </div>
+    <h1>sadadas</h1>
 </template>
 
 

@@ -96,15 +96,15 @@ header {
 
     .top {
         padding: 0.25rem;
-        color: gray;
+        color: $gh_gray;
 
         a {
-            color: gray;
+            color: $gh_gray;
         }
 
         .wish {
             padding-right: 0.5rem;
-            border-right: 2px solid gray;
+            border-right: 2px solid $gh_gray;
         }
 
         .help {
@@ -132,7 +132,7 @@ header {
         }
 
         .utility {
-            fill: #fff;
+            fill: $gh_white;
 
             .carrello {
                 svg {
