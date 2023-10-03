@@ -10,6 +10,7 @@ a {
 
 body {
   min-height: 100vh;
-  background-color: $gh_dark_violet;
+  background-image: url(../img/body-bg.jpg);
+  background-size: contain;
   color: white;
 }
