@@ -1,0 +1,7 @@
+@use './variables' as *;
+
+.splitter {
+    height: 3px;
+    width: 60px;
+    background-color: $gh_warning ;
+}

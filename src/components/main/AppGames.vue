@@ -1,5 +1,6 @@
 <script>
 export default {
+    name: 'AppGames',
     props: [
         'firstImg',
         'firstType',
@@ -15,7 +16,7 @@ export default {
 </script>
 
 <template>
-    <div class="row my-3">
+    <div class="row my-5">
         <div class="col-6 position-relative">
             <div class="position-absolute text_position">
                 <h3 class="warning">{{ firstType }}</h3>
@@ -44,9 +45,9 @@ export default {
 .row {
     .col-6 {
         .text_position {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 45%;
+            left: 60%;
+            transform: translate(-45%, -50%);
 
             .warning {
                 font-weight: 700;

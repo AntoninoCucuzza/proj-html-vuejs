@@ -1,6 +1,7 @@
 <script>
 import AppGames from './main/AppGames.vue';
 import Jumbotron from './main/Jumbotron.vue';
+import SpecialCategory from './main/SpecialCategory.vue'
 
 Jumbotron
 export default {
@@ -15,7 +16,8 @@ export default {
     },
     components: {
         Jumbotron,
-        AppGames
+        AppGames,
+        SpecialCategory,
     }
 }
 </script>
@@ -26,6 +28,8 @@ export default {
         <AppGames :firstImg="popular" :firstType="'Most Popular'" :firstName="'The Battlefield 4'"
             :firstInfo="'Naval Strike'" :secondImg="latest" :secondType="'Latest Game'" :secondName="`Assassin's Creed`"
             :secondInfo="'Unity Game'" />
+
+        <SpecialCategory />
 
         <AppGames :firstImg="discount" :firstType="'20% Discount'" :firstName="`Dragon's Dogma`" :firstInfo="'Video Game'"
             :secondImg="medDiscount" :secondType="'30% Discount'" :secondName="'World Of Tanks'" :secondInfo="'New Game'" />
