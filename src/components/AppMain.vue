@@ -1,7 +1,9 @@
 <script>
-import AppGames from './main/AppGames.vue';
 import Jumbotron from './main/Jumbotron.vue';
+import MainService from './main/MainService.vue'
+import AppGames from './main/AppGames.vue';
 import SpecialCategory from './main/SpecialCategory.vue'
+
 
 Jumbotron
 export default {
@@ -18,12 +20,16 @@ export default {
         Jumbotron,
         AppGames,
         SpecialCategory,
+        MainService,
+
     }
 }
 </script>
 <template>
     <Jumbotron />
     <div class="container">
+
+        <MainService />
 
         <AppGames :firstImg="popular" :firstType="'Most Popular'" :firstName="'The Battlefield 4'"
             :firstInfo="'Naval Strike'" :secondImg="latest" :secondType="'Latest Game'" :secondName="`Assassin's Creed`"
