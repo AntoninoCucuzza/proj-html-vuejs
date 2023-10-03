@@ -67,26 +67,43 @@ export default {
             .img {
                 width: 70px;
                 height: 50px;
+                background-image: url(../../assets/img/service-icon.png);
                 background-repeat: no-repeat;
 
                 &.camion {
-                    background-image: url(../../assets/img/service-icon.png);
                     background-position: 0px -112px;
+
+                    &:hover {
+                        background-position: 0px 1px;
+
+                    }
                 }
 
                 &.bag {
-                    background-image: url(../../assets/img/service-icon.png);
                     background-position: 0px -335px;
+
+                    &:hover {
+                        background-position: 0px -222px;
+
+                    }
                 }
 
                 &.discount {
-                    background-image: url(../../assets/img/service-icon.png);
                     background-position: 0px -562px;
+
+                    &:hover {
+                        background-position: 0px -449px;
+
+                    }
                 }
 
                 &.money {
-                    background-image: url(../../assets/img/service-icon.png);
                     background-position: 0px -787px;
+
+                    &:hover {
+                        background-position: 0px -674px;
+
+                    }
                 }
             }
         }

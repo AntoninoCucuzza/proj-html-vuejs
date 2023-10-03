@@ -96,6 +96,11 @@ header {
 
     .top {
         padding: 0.25rem;
+        color: gray;
+
+        a {
+            color: gray;
+        }
 
         .wish {
             padding-right: 0.5rem;
