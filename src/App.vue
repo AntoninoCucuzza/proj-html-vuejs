@@ -1,11 +1,16 @@
 <script >
+import AppHeader from './components/AppHeader.vue';
+
+export default {
+  components: {
+    AppHeader,
+
+  }
+}
 </script>
 
 <template>
-  <div class="d-flex justify-content-center">
-    <h1 class="text-white">we</h1>
-
-  </div>
+  <AppHeader />
 </template>
 
 <style lang="scss" scoped></style>

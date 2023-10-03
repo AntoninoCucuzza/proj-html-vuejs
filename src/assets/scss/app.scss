@@ -3,8 +3,13 @@
 /* Variables */
 @use './partials/variables' as *;
 
+a {
+  text-decoration: none;
+  color: white;
+}
 
 body {
   min-height: 100vh;
-  background-color: rgb(17, 16, 16);
+  background-color: $gh_dark_violet;
+  color: white;
 }
