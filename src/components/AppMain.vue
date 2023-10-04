@@ -7,6 +7,7 @@ import MainDeals from './main/MainDeals.vue';
 import JumbotronSlider from './main/JumbotronSlider.vue';
 import MainBlogs from './main/MainBlogs.vue';
 import AppFooter from './AppFooter.vue'
+import MainCarousel from './main/carousel/MainCarousel.vue';
 
 export default {
     name: 'AppMain',
@@ -58,7 +59,8 @@ export default {
         MainDeals,
         JumbotronSlider,
         MainBlogs,
-        AppFooter
+        AppFooter,
+        MainCarousel
     }
 }
 </script>
@@ -76,10 +78,14 @@ export default {
 
         <MainDeals :isTrue="false" :title="'our products'" />
 
+        <MainCarousel :propStep="'0px'" />
+
         <AppGames :firstImg="discount" :firstType="'20% Discount'" :firstName="`Dragon's Dogma`" :firstInfo="'Video Game'"
             :secondImg="medDiscount" :secondType="'30% Discount'" :secondName="'World Of Tanks'" :secondInfo="'New Game'" />
 
         <MainDeals :isTrue="true" :title="'deal of the day'" />
+        <MainCarousel :propStep="'1296px'" />
+
     </div>
     <JumbotronSlider />
 
