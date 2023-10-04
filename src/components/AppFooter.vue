@@ -1,0 +1,262 @@
+<script>
+export default {
+    data() {
+        return {
+            position: '<svg xmlns="http://www.w3.org/2000/svg" height="0.875em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>',
+            mail: '<svg xmlns="http://www.w3.org/2000/svg" height="0.875em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>',
+            phone: '<svg xmlns="http://www.w3.org/2000/svg" height="0.875em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>',
+            socials: [
+                {
+                    name: 'facebook',
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>',
+                    link: '#',
+                },
+                {
+                    name: 'twitter',
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>',
+                    link: '#',
+                },
+                {
+                    name: 'google',
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"/></svg>',
+                    link: '#',
+                },
+                {
+                    name: 'skype',
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z"/></svg>',
+                    link: '#',
+                },
+                {
+                    name: 'instagram',
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>',
+                    link: '#',
+                },
+            ],
+            infos: [
+                {
+                    title: 'Bookmark',
+                    link: '#',
+                },
+                {
+                    title: 'Features',
+                    link: '#',
+                },
+                {
+                    title: 'Sitemap',
+                    link: '#',
+                },
+                {
+                    title: 'Lists',
+                    link: '#',
+                },
+                {
+                    title: 'Contact Us',
+                    link: '#',
+                },
+            ],
+            extras: [
+                {
+                    title: 'Delivery',
+                    link: '#',
+                },
+                {
+                    title: 'Cart',
+                    link: '#',
+                },
+                {
+                    title: 'Terms conditions',
+                    link: '#',
+                },
+                {
+                    title: 'My account',
+                    link: '#',
+                },
+                {
+                    title: 'About us',
+                    link: '#',
+                },
+            ]
+        }
+    }
+}
+</script>
+
+<template>
+    <footer class="wrapper">
+        <div class="container area">
+            <div class="row">
+                <div class="col-3">
+                    <h4 class="mb-4">Address Info</h4>
+
+                    <div class="d-flex info">
+                        <div class="svg" v-html="position"></div>
+                        <p>60 29th Street San Francisco CA 94110 507-Union Trade Center, United States of America</p>
+                    </div>
+
+                    <div class="d-flex info">
+                        <div class="svg" v-html="phone"></div>
+                        <p>(+00) 123-456-789</p>
+
+                    </div>
+
+                    <div class="d-flex info">
+                        <div class="svg" v-html="mail"></div>
+                        <p>demo@example.com</p>
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="mb-4">Information</h4>
+                    <ul class="list-unstyled">
+                        <li v-for="info in infos" class="py-1">
+                            <a href="info.link">{{ info.title }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 class="mb-4">Extras</h4>
+                    <ul class="list-unstyled">
+                        <li v-for="extra in extras" class="py-1">
+                            <a href="extra.link">{{ extra.title }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 class="mb-4">Our Newsletter</h4>
+                    <div class="newsletter">
+                        <p>There are many varations of passages of form humour or randomised </p>
+                        <input type="text">
+                        <div class="d-flex socials">
+                            <a class="social" v-for="social in socials " :href="social.link" v-html="social.icon"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container bot">
+            <div class="d-flex justify-content-between">
+                <div class="left">Copyright &copy; 2023 Codezeel</div>
+                <div class="right">
+                    <div class="wrapper d-flex">
+                        <div class="single-img american"></div>
+                        <div class="single-img discover"></div>
+                        <div class="single-img mastercard"></div>
+                        <div class="single-img paypal"></div>
+                        <div class="single-img visa"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</template>
+
+
+<style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
+footer {
+    background-image: url(../assets/img/footer-bg.png);
+
+    .area {
+        padding: 6rem;
+
+        .row {
+            .col-3 {
+                .info {
+                    .svg {
+                        fill: $gh_warning;
+                        margin-right: 1rem;
+                    }
+
+                    p {
+                        color: $gh_gray;
+                    }
+                }
+
+                .newsletter {
+                    p {
+                        color: $gh_gray;
+
+                    }
+
+                    input {
+                        padding: 0.5rem;
+                        border: none;
+                        width: 300px;
+                        background-image: url(../assets/img/newsletter.png);
+                        background-repeat: no-repeat;
+                        background-position: 265px 10px;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-position: 265px -54px;
+                            background-color: $gh_violet_darker;
+                            box-shadow: $gh_dark_violet 0px 0px 20px 3px;
+                        }
+                    }
+
+                    .socials {
+                        .social {
+                            padding: 0.5rem;
+                            fill: $gh_white;
+
+                            &:hover {
+                                filter: drop-shadow(0px 0px 5px $gh_warning);
+                                fill: $gh_warning;
+                            }
+                        }
+                    }
+                }
+
+                ul {
+                    a {
+                        color: $gh_gray ;
+                        transition: 0.2s;
+
+                        &:hover {
+                            color: $gh_warning;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .left {
+        color: $gh-gray;
+    }
+
+    .right {
+        .single-img {
+            width: 50px;
+            height: 35px;
+            background-image: url(../assets/img/payments.png);
+            background-repeat: no-repeat;
+
+        }
+
+        .american {
+            background-position: 0px -236px;
+        }
+
+        .discover {
+            background-position: 0px -195px;
+        }
+
+        .mastercard {
+            background-position: 0px -39px;
+        }
+
+        .paypal {
+            background-position: 0px -116px;
+        }
+
+        .visa {
+            background-position: 0px 0px;
+        }
+    }
+}
+</style>

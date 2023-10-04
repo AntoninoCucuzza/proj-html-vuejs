@@ -2,10 +2,11 @@
 import Jumbotron from './main/Jumbotron.vue';
 import MainService from './main/MainService.vue'
 import AppGames from './main/AppGames.vue';
-import SpecialCategory from './main/SpecialCategory.vue'
+import SpecialCategory from './main/SpecialCategory.vue';
 import MainDeals from './main/MainDeals.vue';
-import JumbotronSlider from './main/JumbotronSlider.vue'
-import MainBlogs from './main/MainBlogs.vue'
+import JumbotronSlider from './main/JumbotronSlider.vue';
+import MainBlogs from './main/MainBlogs.vue';
+import AppFooter from './AppFooter.vue'
 
 export default {
     name: 'AppMain',
@@ -57,6 +58,7 @@ export default {
         MainDeals,
         JumbotronSlider,
         MainBlogs,
+        AppFooter
     }
 }
 </script>
@@ -90,9 +92,8 @@ export default {
                 </a>
             </div>
         </div>
-
     </div>
-    <h1>asddas</h1>
+    <AppFooter />
 </template>
 
 

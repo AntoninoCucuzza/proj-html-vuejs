@@ -15,7 +15,7 @@ export default {
 
 <template>
     <div class="d-flex flex-column align-items-center wrapper">
-        <h1 class="text-capitalize text-center">{{ title }}</h1>
+        <h1 class="text-capitalize text-center mt-5">{{ title }}</h1>
         <div class="splitter"></div>
 
         <div class="row">
