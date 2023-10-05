@@ -28,6 +28,7 @@ export default {
                     image: 'src/assets/img/01-300x300.jpg',
                     discount: '$180.00',
                     price: '$100.00',
+                    badge: '- 44%'
                 },
                 {
                     star: 0,
@@ -54,6 +55,8 @@ export default {
                     image: 'src/assets/img/05-300x300.jpg',
                     discount: '$180.00',
                     price: '$100.00',
+                    badge: '- 44%'
+
                 },
                 {
                     star: 0,
@@ -166,7 +169,7 @@ export default {
 
         <div class="row align-items-center" ref="inner" :style="innerStyles">
             <SingleCard v-for="card in cards" :img="card.image" :title="card.title" :price="card.price"
-                :pricetwo="card.pricetwo" :discount="card.discount" :stars="card.star" />
+                :pricetwo="card.pricetwo" :discount="card.discount" :stars="card.star" :badge="card.badge" />
         </div>
         <div class="command position-relative">
             <div class="position-absolute prev" @click="prev"></div>

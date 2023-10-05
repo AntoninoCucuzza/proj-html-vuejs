@@ -7,6 +7,7 @@ export default {
         'price',
         'pricetwo',
         'stars',
+        'badge'
     ],
     data() {
         return {
@@ -24,7 +25,10 @@ export default {
 <template>
     <div class="col-3">
         <div class="product">
-            <img :src="img" alt="">
+            <div class="img-wrapper position-relative">
+                <img :src="img" alt="">
+                <div v-if="badge" class=" position-absolute badge-discount"> {{ badge }}</div>
+            </div>
             <div class="info position-relative">
                 <div class="d-flex vote">
                     <div class="positive" v-for="asd in stars " v-html="vote"></div>
@@ -39,16 +43,16 @@ export default {
                     <div class="overlay position-absolute d-none">
                         <div class="row">
                             <div class="col-3 pe-0">
-                                <div class="p-1 test text-center border-bottom-0 border-start-0" v-html="bag"></div>
+                                <div class="p-1 tool text-center border-bottom-0 border-start-0" v-html="bag"></div>
                             </div>
                             <div class="col-3 p-0">
-                                <div class="p-1 test text-center border-bottom-0" v-html="heart"></div>
+                                <div class="p-1 tool text-center border-bottom-0" v-html="heart"></div>
                             </div>
                             <div class="col-3 p-0">
-                                <div class="p-1 test text-center border-bottom-0" v-html="big"></div>
+                                <div class="p-1 tool text-center border-bottom-0" v-html="big"></div>
                             </div>
                             <div class="col-3 ps-0">
-                                <div class="p-1 test text-center border-bottom-0 border-end-0" v-html="eyes"></div>
+                                <div class="p-1 tool text-center border-bottom-0 border-end-0" v-html="eyes"></div>
                             </div>
                         </div>
                     </div>
@@ -64,6 +68,15 @@ export default {
 @use '../../../assets/scss/partials/variables' as *;
 
 
+.badge-discount {
+    padding: 0rem 1rem;
+    margin: 0.5rem;
+    top: 0;
+    left: 0;
+    background-color: $gh_warning;
+    color: $gh_black;
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+}
 
 .info {
     background-color: $gh_violet_darker;
@@ -110,7 +123,7 @@ export default {
         left: 0;
         width: 100%;
 
-        & .test {
+        & .tool {
             border: 1px solid $gh_gray;
             fill: white;
         }
