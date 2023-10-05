@@ -33,7 +33,6 @@ export default {
         <h1 class=" text-center m-0">Special Category</h1>
         <div class="splitter my-3"></div>
         <div class="row">
-
             <div class="col-4" v-for="game in games">
                 <div class="overlay-wrapper">
                     <div class="overlay position-absolute">

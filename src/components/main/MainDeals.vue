@@ -13,6 +13,8 @@ export default {
     <div class="d-flex flex-column align-items-center wrapper">
         <h1 class="text-capitalize text-center">{{ title }}</h1>
         <div class="splitter"></div>
+
+        <!-- se confermo la condizione nell'elemento padre vedro 4 diverse caselle  -->
         <template v-if="isTrue">
             <div class="wrapeer_container_lg">
                 <div class="row">
@@ -24,6 +26,7 @@ export default {
             </div>
         </template>
 
+        <!-- se falsa nell'elemento padre vedro 3 diverse caselle  -->
         <template v-else>
             <div class="wrapeer_container_sm">
                 <div class="row">
@@ -40,6 +43,7 @@ export default {
                 </div>
             </div>
         </template>
+
     </div>
 </template>
 

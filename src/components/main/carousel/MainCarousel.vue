@@ -77,7 +77,73 @@ export default {
                     image: 'src/assets/img/08-300x300.jpg',
                     price: '$110.00',
                 },
+                {
+                    star: 4,
+                    title: 'Shopping Mhajong connect',
+                    image: 'src/assets/img/09-300x300.jpg',
+                    discount: '$180.00',
+                    price: '$100.00',
+                    badge: '- 44%'
+                },
+                {
+                    star: 0,
+                    title: 'Buddy and Lucky Solitare',
+                    image: 'src/assets/img/10-300x300.jpg',
+                    price: '$83.00',
+                    pricetwo: ' - $90.00',
+                },
+                {
+                    star: 0,
+                    title: 'Taishou x Alice Epilogue',
+                    image: 'src/assets/img/11-300x300.jpg',
+                    price: '$160.00',
+                },
+                {
+                    star: 2,
+                    title: 'Labyrinths of the World',
+                    image: 'src/assets/img/12-300x300.jpg',
+                    price: '$110.00',
+                },
+                {
+                    star: 4,
+                    title: 'Shopping Mhajong connect',
+                    image: 'src/assets/img/13-300x300.jpg',
+                    discount: '$180.00',
+                    price: '$100.00',
+                    badge: '- 44%'
 
+                },
+                {
+                    star: 0,
+                    title: 'Buddy and Lucky Solitare',
+                    image: 'src/assets/img/14-300x300.jpg',
+                    price: '$83.00',
+                    pricetwo: ' - $90.00',
+                },
+                {
+                    star: 0,
+                    title: 'Taishou x Alice Epilogue',
+                    image: 'src/assets/img/15-300x300.jpg',
+                    price: '$160.00',
+                },
+                {
+                    star: 2,
+                    title: 'Labyrinths of the World',
+                    image: 'src/assets/img/16-300x300.jpg',
+                    price: '$110.00',
+                },
+                {
+                    star: 0,
+                    title: 'Taishou x Alice Epilogue',
+                    image: 'src/assets/img/17-300x300.jpg',
+                    price: '$160.00',
+                },
+                {
+                    star: 2,
+                    title: 'Labyrinths of the World',
+                    image: 'src/assets/img/18-300x300.jpg',
+                    price: '$110.00',
+                },
             ],
             innerStyles: {},
             step: this.propStep,
@@ -93,6 +159,10 @@ export default {
 
     methods: {
         setStep() {
+            /* 
+            calcola la larghezza interna totale 
+            e calcola il valore necessario per andare avanti di una card  
+            */
             const innerWidth = this.$refs.inner.scrollWidth
             const totalCards = this.cards.length
             this.step = `${innerWidth / totalCards}px`
@@ -104,7 +174,7 @@ export default {
             this.transitioning = true
 
             this.moveLeft()
-
+            /* rimuove la prima card e la pusha alla fine  */
             this.afterTransition(() => {
                 const card = this.cards.shift()
                 this.cards.push(card)
@@ -120,7 +190,7 @@ export default {
             this.transitioning = true
 
             this.moveRight()
-
+            /* rimuove la card dalla fine e lo piazza all'inizio */
             this.afterTransition(() => {
                 const card = this.cards.pop()
                 this.cards.unshift(card)
@@ -131,6 +201,7 @@ export default {
             })
         },
 
+        /* moveLeft moveRight gestiscono la transizione per spostarsi */
         moveLeft() {
             this.innerStyles = {
                 transform: `translateX(-${this.step})

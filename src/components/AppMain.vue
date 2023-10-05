@@ -6,7 +6,6 @@ import SpecialCategory from './main/SpecialCategory.vue';
 import MainDeals from './main/MainDeals.vue';
 import JumbotronSlider from './main/JumbotronSlider.vue';
 import MainBlogs from './main/MainBlogs.vue';
-import AppFooter from './AppFooter.vue'
 import MainCarousel from './main/carousel/MainCarousel.vue';
 import MainBrands from './main/MainBrands.vue'
 
@@ -29,7 +28,6 @@ export default {
         JumbotronSlider,
         MainBrands,
         MainBlogs,
-        AppFooter,
         MainCarousel
     },
 
@@ -47,7 +45,7 @@ export default {
             :secondInfo="'Unity Game'" />
 
         <SpecialCategory />
-
+        <!-- negazione della condizione -->
         <MainDeals :isTrue="false" :title="'our products'" />
 
         <MainCarousel :propStep="'0px'" />
@@ -55,7 +53,9 @@ export default {
         <AppGames :firstImg="discount" :firstType="'20% Discount'" :firstName="`Dragon's Dogma`" :firstInfo="'Video Game'"
             :secondImg="medDiscount" :secondType="'30% Discount'" :secondName="'World Of Tanks'" :secondInfo="'New Game'" />
 
+        <!-- conferma della condizione -->
         <MainDeals :isTrue="true" :title="'deal of the day'" />
+
         <MainCarousel :propStep="'1296px'" />
 
     </div>
@@ -65,7 +65,6 @@ export default {
         <MainBlogs :title="'new game blogs'" />
         <MainBrands />
     </div>
-    <AppFooter />
 </template>
 
 
