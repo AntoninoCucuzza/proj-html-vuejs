@@ -7,9 +7,9 @@ proj-html-vuejs
 Riprodurre il layout proposto solo in versione Desktop
 
 ### Tecnologie da utilizzare
-- [x]HTML
-- [x]CSS / Scss
-- [x]VueJs / Vite 
+- HTML
+- CSS / Scss
+- VueJs / Vite 
 
 ### Requisiti tecnici minimi
 Creare un progetto con Vite, strutturando il layout in almeno 3 macro-componenti: 
