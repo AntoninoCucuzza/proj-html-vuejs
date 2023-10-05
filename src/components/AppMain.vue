@@ -8,6 +8,7 @@ import JumbotronSlider from './main/JumbotronSlider.vue';
 import MainBlogs from './main/MainBlogs.vue';
 import AppFooter from './AppFooter.vue'
 import MainCarousel from './main/carousel/MainCarousel.vue';
+import MainBrands from './main/MainBrands.vue'
 
 export default {
     name: 'AppMain',
@@ -17,38 +18,6 @@ export default {
             latest: 'src/assets/img/cms-banner-02.jpg',
             discount: 'src/assets/img/cms-banner-03.jpg',
             medDiscount: 'src/assets/img/cms-banner-04.jpg',
-            brands: [
-                {
-                    name: 'White Wols',
-                    logo: 'src/assets/img/brand-01.png',
-                    link: '#',
-                },
-
-                {
-                    name: 'Fighters1',
-                    logo: 'src/assets/img/brand-02.png',
-                    link: '#',
-                },
-
-                {
-                    name: 'Tigers',
-                    logo: 'src/assets/img/brand-03.png',
-                    link: '#',
-                },
-
-                {
-                    name: 'Rhino',
-                    logo: 'src/assets/img/brand-04.png',
-                    link: '#',
-                },
-
-                {
-                    name: 'B2Jersey',
-                    logo: 'src/assets/img/brand-05.png',
-                    link: '#',
-                },
-            ]
-
         }
     },
     components: {
@@ -58,11 +27,14 @@ export default {
         MainService,
         MainDeals,
         JumbotronSlider,
+        MainBrands,
         MainBlogs,
         AppFooter,
         MainCarousel
-    }
+    },
+
 }
+
 </script>
 <template>
     <Jumbotron />
@@ -91,13 +63,7 @@ export default {
 
     <div class="container">
         <MainBlogs :title="'new game blogs'" />
-        <div class="row my-5">
-            <div class="col" v-for="brand in brands">
-                <a href="brand.link">
-                    <img :src="brand.logo" :alt="brand.name">
-                </a>
-            </div>
-        </div>
+        <MainBrands />
     </div>
     <AppFooter />
 </template>

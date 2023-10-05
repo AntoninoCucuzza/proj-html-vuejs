@@ -1,6 +1,30 @@
 <script>
 export default {
     name: 'SpecialCategory',
+    data() {
+        return {
+
+            games: [
+                {
+                    name: 'Battlefield 3',
+                    img: '../../assets/img/category-image-02-446x550_t.jpg',
+                },
+                {
+                    name: 'Pubg',
+                    img: '../../assets/img/category-image-01-446x550_t.jpg',
+                },
+                {
+                    name: 'Jump Force',
+                    img: '../../assets/img/category-image-03-446x550_t.jpg',
+                },
+            ]
+        }
+    },
+    methods: {
+        getImg(url) {
+            return new URL(`${url}`, import.meta.url).href
+        },
+    }
 
 }
 </script>
@@ -9,36 +33,17 @@ export default {
         <h1 class=" text-center m-0">Special Category</h1>
         <div class="splitter my-3"></div>
         <div class="row">
-            <div class="col-4 ">
-                <div class="overlay-wrapper">
-                    <div class="overlay position-absolute">
-                        <h5>Battlefield 3</h5>
-                        <a href="#">Shop Now</a>
-                    </div>
-                    <img class="img-fluid" src="../../assets/img/category-image-02-446x550_t.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-4 ">
-                <div class="overlay-wrapper">
-                    <div class="overlay position-absolute">
-                        <h5>Pubg</h5>
-                        <a href="#">Shop Now</a>
-                    </div>
-                    <img class="img-fluid" src="../../assets/img/category-image-01-446x550_t.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-4 ">
-                <div class="overlay-wrapper">
-                    <div class="overlay position-absolute">
-                        <h5>Jump Force</h5>
-                        <a href="#">Shop Now</a>
-                    </div>
-                    <img class="img-fluid" src="../../assets/img/category-image-03-446x550_t.jpg" alt="">
-                </div>
-            </div>
 
+            <div class="col-4" v-for="game in games">
+                <div class="overlay-wrapper">
+                    <div class="overlay position-absolute">
+                        <h5> {{ game.name }}</h5>
+                        <a href="#">Shop Now</a>
+                    </div>
+                    <img :title="game.name" class="img-fluid" :src="getImg(game.img)" alt="">
+                </div>
+            </div>
         </div>
-
     </div>
 </template>
 

@@ -6,22 +6,22 @@ export default {
             activeSlide: 0,
             slides: [
                 {
-                    image: "src/assets/img/t5-1-100x100_left.jpg",
+                    image: "../../assets/img/t5-1-100x100_left.jpg",
                     name: "Luies Charls",
                     role: "Web Designer",
                     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos magni, sunt laudantium aut, maiores veritatis omnis soluta iusto quidem est assumenda laborum provident, cumque obcaecati libero? Commodi, nihil ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit."
                 },
                 {
-                    image: "src/assets/img/t4-1-100x100_left.jpg",
+                    image: "../../assets/img/t4-1-100x100_left.jpg",
                     name: "Mario bros",
                     role: "Idraulico",
                     description: " oltre a fare l'idraulico salva la stessa principessa dal 1985 dalla stessa indentica tartaruga sotto steroidi a cui hanno appiccicato delle spine sul guscio"
                 },
                 {
-                    image: "src/assets/img/t2-1-100x100_left.jpg",
+                    image: "../../assets/img/t2-1-100x100_left.jpg",
                     name: "Luigi bros",
                     role: "Idraulico",
-                    description: "fratello di Mario anche lui un idraulico ma ogni tra un rewatch di Ghostbuster e uno dell'esorciccio si diverte a far cosplay in ville abbandonate e si immagina di assorbire fantasmi con una aspirapolvere, sotto effetto di qualcosa? poesse"
+                    description: "fratello di Mario anche lui un idraulico ma tra un rewatch di Ghostbuster e uno dell'esorciccio si diverte a far cosplay in ville abbandonate e si immagina di assorbire fantasmi con una aspirapolvere, sotto effetto di qualcosa? poesse"
                 }
             ]
         }
@@ -30,6 +30,10 @@ export default {
         changeSlide(i) {
             this.activeSlide = i
             console.log(this.activeSlide);
+        },
+        getImg(url) {
+            return new URL(`${url}`, import.meta.url).href
+
         }
     }
 }
@@ -46,7 +50,7 @@ export default {
 
                             <div class="img-wrapper position-relative">
 
-                                <img class="img-fluid plot" :src="slide.image" alt="">
+                                <img class="img-fluid plot" :src="getImg(slide.image)" alt="">
                                 <div class="position-absolute quote"></div>
 
                             </div>
@@ -64,7 +68,7 @@ export default {
 
 
                     <div class="d-flex tools ">
-                        <div v-for="(ball, i) in 3" @click="changeSlide(i)" class="balls"
+                        <div v-for="(ball, i) in slides" @click="changeSlide(i)" class="balls"
                             :class="i === activeSlide ? 'active' : ''"></div>
 
                     </div>
